@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;900&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Color Theme Swatches in RGBA */
+* {
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../images/corkboard.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: 'Courier Prime', monospace; }
+
+#container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 3rem auto;
+  min-height: 70vh; }
+
+header h1 {
+  text-align: center;
+  font-family: 'Grandstander';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4rem;
+  letter-spacing: 2rem;
+  color: lime; }
+header .add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 400ms; }
+  header .add:hover {
+    text-decoration: underline lime; }
+  header .add img {
+    border-radius: 0.2rem;
+    width: 18px;
+    margin-right: 0.5rem; }
+  header .add a {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold; }
+    header .add a:hover {
+      color: lime; }
+
+main .taskes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 6%;
+  row-gap: 10%;
+  margin-top: 2rem; }
+main .task-card {
+  min-width: 300px;
+  min-height: 200px;
+  background-color: #FFFFA5;
+  box-shadow: 0 0 0.1rem 0.1rem yellow;
+  padding: 2rem;
+  transform: rotate(-5deg); }
+
+#edit {
+  transition: 400ms;
+  margin: auto; }
+  #edit textarea {
+    min-width: 300px;
+    min-height: 200px;
+    background-color: #FFFFA5;
+    box-shadow: 0 0 0.1rem 0.1rem yellow;
+    padding: 2rem;
+    border: none;
+    outline: none; }
+  #edit .edit-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    #edit .edit-button-save, #edit .edit-button-delete {
+      width: 45%;
+      outline: none;
+      border: none;
+      border-radius: 1rem;
+      color: black;
+      cursor: pointer; }
+    #edit .edit-button-delete {
+      background-color: #f92424; }
+    #edit .edit-button-save {
+      background-color: #1aee1a; }
+
+#create {
+  transition: 400ms;
+  margin: auto; }
+  #create textarea {
+    min-width: 300px;
+    min-height: 200px;
+    background-color: #FFFFA5;
+    box-shadow: 0 0 0.1rem 0.1rem yellow;
+    padding: 2rem;
+    border: none;
+    outline: none; }
+  #create .create-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    #create .create-button-save, #create .create-button-delete {
+      width: 45%;
+      outline: none;
+      border: none;
+      border-radius: 1rem;
+      color: black;
+      cursor: pointer; }
+    #create .create-button-delete {
+      background-color: #f92424; }
+    #create .create-button-save {
+      background-color: #1aee1a; }
+
+.notshow {
+  display: none; }
+
+/*# sourceMappingURL=style.css.map */

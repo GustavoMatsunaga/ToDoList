@@ -1,0 +1,187 @@
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;900&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+// Small devices (landscape phones, 576px and up)
+$break-small-mobile: 576px;
+
+// Medium devices (tablets, 768px and up)
+$break-medium-mobile: 768px;
+
+// Large devices (desktops, 992px and up)
+$break-large-mobile: 992px;
+
+// Extra large devices (large desktops, 1200px and up)
+$break-desktop: 1200px;
+
+/* Color Theme Swatches in RGBA */
+$underline-color: #dd00ffbb;
+$letters: rgba(242,242,242, 1);
+$primary-background: rgb(255, 255, 255);
+$secondary-background: rgb(243, 187, 33);
+$post-it-yellow: #FFFFA5;
+$primary-title-color: rgb(0, 255, 0);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("../images/corkboard.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: 'Courier Prime', monospace;
+}
+
+#container {
+    width: 90vw;
+    max-width: $break-desktop;
+    margin: 3rem auto;
+    min-height: 70vh;
+}
+
+header {
+    h1 {
+        text-align: center;
+        font-family: 'Grandstander';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 4rem;
+        letter-spacing: 2rem;
+        color: $primary-title-color;
+    }
+
+    .add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 400ms;
+
+        &:hover {
+            text-decoration: underline $primary-title-color;
+        }
+
+        img {
+            border-radius: 0.2rem;
+            width: 18px;
+            margin-right: 0.5rem;
+        }
+
+        a {
+            font-size: 1.4rem;
+            color: white;
+            font-weight: bold;
+
+            &:hover {
+                color: $primary-title-color;
+            }
+        }
+    }
+}
+
+main {
+    .taskes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 6%;
+        row-gap: 10%;
+        margin-top: 2rem;
+    }
+
+    .task-card {
+        min-width: 300px;
+        min-height: 200px;
+        background-color: $post-it-yellow;
+        box-shadow: 0 0 0.1rem 0.1rem yellow;
+        padding: 2rem;
+        transform: rotate(-5deg);
+    }
+}
+
+// EDIT
+#edit {
+    transition: 400ms;
+    margin: auto;
+
+    textarea {
+        min-width: 300px;
+        min-height: 200px;
+        background-color: $post-it-yellow;
+        box-shadow: 0 0 0.1rem 0.1rem yellow;
+        padding: 2rem;
+        border: none;
+        outline: none;
+    }
+
+    .edit-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-save, &-delete {
+            width: 45%;
+            outline: none;
+            border:none;
+            border-radius: 1rem;
+            color:black;
+            cursor:pointer;
+        }
+
+        &-delete {
+            background-color: rgb(249, 36, 36);
+        }
+
+        &-save {
+            background-color: rgb(26, 238, 26);
+        }
+
+    }
+}
+
+// CREATE
+#create {
+    transition: 400ms;
+    margin: auto;
+
+    textarea {
+        min-width: 300px;
+        min-height: 200px;
+        background-color: $post-it-yellow;
+        box-shadow: 0 0 0.1rem 0.1rem yellow;
+        padding: 2rem;
+        border: none;
+        outline: none;
+    }
+
+    .create-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-save, &-delete {
+            width: 45%;
+            outline: none;
+            border:none;
+            border-radius: 1rem;
+            color:black;
+            cursor:pointer;
+        }
+
+        &-delete {
+            background-color: rgb(249, 36, 36);
+        }
+
+        &-save {
+            background-color: rgb(26, 238, 26);
+        }
+    }
+}
+
+.notshow {
+    display: none;
+}

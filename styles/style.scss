@@ -1,8 +1,11 @@
+// Reset CSS
 @import "reset";
 
+// Fonts
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;900&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
+/********* VARIABLES *********/
 // Small devices (landscape phones, 576px and up)
 $break-small-mobile: 576px;
 
@@ -21,8 +24,9 @@ $letters: rgba(242,242,242, 1);
 $primary-background: rgb(255, 255, 255);
 $secondary-background: rgb(243, 187, 33);
 $post-it-yellow: #FFFFA5;
-$primary-title-color: rgb(0, 255, 0);
+$primary-title-color: #00ff15;
 
+/********* MAIN *********/
 * {
     box-sizing: border-box;
 }
@@ -38,7 +42,7 @@ body {
 }
 
 #container {
-    width: 90vw;
+    width: 80vw;
     max-width: $break-desktop;
     margin: 3rem auto;
     min-height: 70vh;
@@ -53,6 +57,10 @@ header {
         font-size: 4rem;
         letter-spacing: 2rem;
         color: $primary-title-color;
+
+        @media (max-width: $break-medium-mobile){
+            letter-spacing: inherit
+        }
     }
 
     .add {
@@ -91,6 +99,14 @@ main {
         column-gap: 6%;
         row-gap: 10%;
         margin-top: 2rem;
+
+        @media (max-width: $break-large-mobile){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: $break-medium-mobile){
+            grid-template-columns: 1fr;
+        }
     }
 
     .task-card {
@@ -99,18 +115,39 @@ main {
         background-color: $post-it-yellow;
         box-shadow: 0 0 0.1rem 0.1rem yellow;
         padding: 2rem;
-        transform: rotate(-5deg);
+
+        @media (max-width: $break-medium-mobile){
+            min-width: 80vw;
+        }
     }
 }
 
-// EDIT
+/********* EDIT *********/
 #edit {
     transition: 400ms;
     margin: auto;
+    width: 80vw;
+    max-width: 560px;
+
+    h1 {
+        text-align: center;
+        font-family: 'Grandstander';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 4rem;
+        letter-spacing: 1.4rem;
+        margin-bottom: 2rem;
+        color: $primary-title-color;
+
+        @media (max-width: $break-small-mobile){
+            letter-spacing: inherit
+        }
+
+    }
 
     textarea {
-        min-width: 300px;
-        min-height: 200px;
+        min-width: 100%;
+        min-height: 300px;
         background-color: $post-it-yellow;
         box-shadow: 0 0 0.1rem 0.1rem yellow;
         padding: 2rem;
@@ -124,7 +161,8 @@ main {
         justify-content: space-between;
 
         &-save, &-delete {
-            width: 45%;
+            width: 40%;
+            padding: 1rem;
             outline: none;
             border:none;
             border-radius: 1rem;
@@ -133,29 +171,48 @@ main {
         }
 
         &-delete {
-            background-color: rgb(249, 36, 36);
+            background-color: rgb(250, 108, 108);
         }
 
         &-save {
-            background-color: rgb(26, 238, 26);
+            background-color: rgb(106, 247, 106);
         }
 
     }
 }
 
-// CREATE
+/********* CREATE *********/
 #create {
     transition: 400ms;
     margin: auto;
+    width: 80vw;
+    max-width: 560px;
+
+    h1 {
+        text-align: center;
+        font-family: 'Grandstander';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 4rem;
+        letter-spacing: 1.4rem;
+        margin-bottom: 2rem;
+        color: $primary-title-color;
+
+        @media (max-width: $break-small-mobile){
+            letter-spacing: inherit
+        }
+
+    }
 
     textarea {
-        min-width: 300px;
-        min-height: 200px;
+        min-width: 100%;
+        min-height: 300px;
         background-color: $post-it-yellow;
         box-shadow: 0 0 0.1rem 0.1rem yellow;
         padding: 2rem;
         border: none;
         outline: none;
+        margin-bottom: 1rem;
     }
 
     .create-button {
@@ -164,7 +221,8 @@ main {
         justify-content: space-between;
 
         &-save, &-delete {
-            width: 45%;
+            width: 40%;
+            padding: 1rem;
             outline: none;
             border:none;
             border-radius: 1rem;
@@ -173,15 +231,17 @@ main {
         }
 
         &-delete {
-            background-color: rgb(249, 36, 36);
+            background-color: rgb(250, 108, 108);
         }
 
         &-save {
-            background-color: rgb(26, 238, 26);
+            background-color: rgb(106, 247, 106);
         }
     }
 }
 
+
+/********* NOTSHOW DISPLAY *********/
 .notshow {
     display: none;
 }

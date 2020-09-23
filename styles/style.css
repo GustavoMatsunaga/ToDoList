@@ -47,7 +47,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/********* VARIABLES *********/
 /* Color Theme Swatches in RGBA */
+/********* MAIN *********/
 * {
   box-sizing: border-box; }
 
@@ -61,7 +63,7 @@ body {
   font-family: 'Courier Prime', monospace; }
 
 #container {
-  width: 90vw;
+  width: 80vw;
   max-width: 1200px;
   margin: 3rem auto;
   min-height: 70vh; }
@@ -73,7 +75,10 @@ header h1 {
   font-weight: 900;
   font-size: 4rem;
   letter-spacing: 2rem;
-  color: lime; }
+  color: #00ff15; }
+  @media (max-width: 768px) {
+    header h1 {
+      letter-spacing: inherit; } }
 header .add {
   display: flex;
   align-items: center;
@@ -81,7 +86,7 @@ header .add {
   cursor: pointer;
   transition: 400ms; }
   header .add:hover {
-    text-decoration: underline lime; }
+    text-decoration: underline #00ff15; }
   header .add img {
     border-radius: 0.2rem;
     width: 18px;
@@ -91,7 +96,7 @@ header .add {
     color: white;
     font-weight: bold; }
     header .add a:hover {
-      color: lime; }
+      color: #00ff15; }
 
 main .taskes {
   display: grid;
@@ -99,20 +104,43 @@ main .taskes {
   column-gap: 6%;
   row-gap: 10%;
   margin-top: 2rem; }
+  @media (max-width: 992px) {
+    main .taskes {
+      grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) {
+    main .taskes {
+      grid-template-columns: 1fr; } }
 main .task-card {
   min-width: 300px;
   min-height: 200px;
   background-color: #FFFFA5;
   box-shadow: 0 0 0.1rem 0.1rem yellow;
-  padding: 2rem;
-  transform: rotate(-5deg); }
+  padding: 2rem; }
+  @media (max-width: 768px) {
+    main .task-card {
+      min-width: 80vw; } }
 
+/********* EDIT *********/
 #edit {
   transition: 400ms;
-  margin: auto; }
+  margin: auto;
+  width: 80vw;
+  max-width: 560px; }
+  #edit h1 {
+    text-align: center;
+    font-family: 'Grandstander';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: 1.4rem;
+    margin-bottom: 2rem;
+    color: #00ff15; }
+    @media (max-width: 576px) {
+      #edit h1 {
+        letter-spacing: inherit; } }
   #edit textarea {
-    min-width: 300px;
-    min-height: 200px;
+    min-width: 100%;
+    min-height: 300px;
     background-color: #FFFFA5;
     box-shadow: 0 0 0.1rem 0.1rem yellow;
     padding: 2rem;
@@ -123,44 +151,63 @@ main .task-card {
     align-items: center;
     justify-content: space-between; }
     #edit .edit-button-save, #edit .edit-button-delete {
-      width: 45%;
+      width: 40%;
+      padding: 1rem;
       outline: none;
       border: none;
       border-radius: 1rem;
       color: black;
       cursor: pointer; }
     #edit .edit-button-delete {
-      background-color: #f92424; }
+      background-color: #fa6c6c; }
     #edit .edit-button-save {
-      background-color: #1aee1a; }
+      background-color: #6af76a; }
 
+/********* CREATE *********/
 #create {
   transition: 400ms;
-  margin: auto; }
+  margin: auto;
+  width: 80vw;
+  max-width: 560px; }
+  #create h1 {
+    text-align: center;
+    font-family: 'Grandstander';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: 1.4rem;
+    margin-bottom: 2rem;
+    color: #00ff15; }
+    @media (max-width: 576px) {
+      #create h1 {
+        letter-spacing: inherit; } }
   #create textarea {
-    min-width: 300px;
-    min-height: 200px;
+    min-width: 100%;
+    min-height: 300px;
     background-color: #FFFFA5;
     box-shadow: 0 0 0.1rem 0.1rem yellow;
     padding: 2rem;
     border: none;
-    outline: none; }
+    outline: none;
+    margin-bottom: 1rem; }
   #create .create-button {
     display: flex;
     align-items: center;
     justify-content: space-between; }
     #create .create-button-save, #create .create-button-delete {
-      width: 45%;
+      width: 40%;
+      padding: 1rem;
       outline: none;
       border: none;
       border-radius: 1rem;
       color: black;
       cursor: pointer; }
     #create .create-button-delete {
-      background-color: #f92424; }
+      background-color: #fa6c6c; }
     #create .create-button-save {
-      background-color: #1aee1a; }
+      background-color: #6af76a; }
 
+/********* NOTSHOW DISPLAY *********/
 .notshow {
   display: none; }
 

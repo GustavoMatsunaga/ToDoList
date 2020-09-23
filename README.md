@@ -10,7 +10,8 @@ You can checkout the demo here : <strong><a href="https://gustavomatsunaga.githu
 
 ## Challenges! :pushpin:
 
-The application was developed with only HTML, CSS and vanilla Javascript. I made a CRUD (Create, read, update and delete) application in order to maintain my daily routines organized. The website is completely responsive, so it can fit even for mobiles. 
+The application was developed with only HTML, CSS and vanilla Javascript. I made a CRUD (Create, read, update and delete) application in order to maintain my daily routines organized. The website is completely responsive, so it can fit even for mobiles.
+The greatest challenge was only using a Single Page to build the application, so it doesn't need to refresh. The application needed a lot of DOM manipulation in order to fulfill this.
 
 **Features! Let's have fun!** 🚀
 
